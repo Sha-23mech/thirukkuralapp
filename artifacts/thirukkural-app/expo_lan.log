@@ -1,0 +1,25 @@
+Starting project at C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\thirukkural-app
+React Compiler enabled
+Starting Metro Bundler
+The following packages should be updated for best compatibility with the installed expo version:
+  react-native-keyboard-controller@1.21.3 - expected version: 1.18.5
+Your project may not work correctly until you install the expected versions of the packages.
+Waiting on http://localhost:19105
+Logs for your project will appear below.
+Web node_modules\.pnpm\expo-router@6.0.23_@types+r_abd38177f532ddff11e5834956475527\node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web Bundled 2306ms node_modules\.pnpm\expo-router@6.0.23_@types+r_abd38177f532ddff11e5834956475527\node_modules\expo-router\entry.js (1447 modules)
+ LOG  [web] Logs will appear in the browser console
+Web node_modules\.pnpm\expo-router@6.0.23_@types+r_abd38177f532ddff11e5834956475527\node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web Bundled 98ms node_modules\.pnpm\expo-router@6.0.23_@types+r_abd38177f532ddff11e5834956475527\node_modules\expo-router\entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web node_modules\.pnpm\expo-router@6.0.23_@types+r_abd38177f532ddff11e5834956475527\node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web Bundled 144ms node_modules\.pnpm\expo-router@6.0.23_@types+r_abd38177f532ddff11e5834956475527\node_modules\expo-router\entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web node_modules\.pnpm\expo-router@6.0.23_@types+r_abd38177f532ddff11e5834956475527\node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web Bundled 89ms node_modules\.pnpm\expo-router@6.0.23_@types+r_abd38177f532ddff11e5834956475527\node_modules\expo-router\entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web node_modules\.pnpm\expo-router@6.0.23_@types+r_abd38177f532ddff11e5834956475527\node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Web Bundled 103ms node_modules\.pnpm\expo-router@6.0.23_@types+r_abd38177f532ddff11e5834956475527\node_modules\expo-router\entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+
+C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\thirukkural-app>

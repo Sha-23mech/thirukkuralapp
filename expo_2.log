@@ -1,0 +1,11 @@
+Starting project at C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\thirukkural-app
+› Port 8081 is being used by another process
+Input is required, but 'npx expo' is in non-interactive mode.
+Required input:
+> Use port 8082 instead?
+› Skipping dev server
+undefined
+C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\thirukkural-app:
+ ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command failed with exit code 1: expo start --tunnel
+
+C:\Users\thush\Desktop\New folder\Thirukkural-Parser>

@@ -1,0 +1,25 @@
+{
+  "cli": {
+    "version": ">= 14.4.2",
+    "appExtensions": {
+      "thirukkural-app": {
+        "appleTeamId": "YOUR_APPLE_TEAM_ID"
+      }
+    }
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {}
+  },
+  "submit": {
+    "production": {}
+  }
+}

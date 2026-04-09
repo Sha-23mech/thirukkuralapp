@@ -14,10 +14,9 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 import * as Haptics from "expo-haptics";
 
+import { useGetKurals } from "@workspace/api-client-react";
+import type { Kural } from "@workspace/api-client-react";
 import Colors from "@/constants/colors";
-import data from "@/data/thirukkural.json";
-
-type Kural = (typeof data.pals)[0]["adhikarams"][0]["kurals"][0];
 
 function KuralCard({ kural, index }: { kural: Kural; index: number }) {
   const scale = useRef(new Animated.Value(1)).current;
@@ -97,7 +96,24 @@ export default function HomeScreen() {
   const topPadding = Platform.OS === "web" ? 67 : insets.top;
   const bottomPadding = Platform.OS === "web" ? 34 : tabBarHeight;
 
-  const kurals = data.pals[0].adhikarams[0].kurals;
+  // For the initial version, we fetch kurals for the first adhikaram (id: 1)
+  const { data: kurals, isLoading, error } = useGetKurals({ adhikaramId: 1 });
+
+  if (isLoading) {
+    return (
+      <View style={[styles.container, { paddingTop: topPadding, justifyContent: 'center', alignItems: 'center' }]}>
+        <Text>தரவுகள் தரவிறக்கப்படுகின்றன...</Text>
+      </View>
+    );
+  }
+
+  if (error) {
+    return (
+      <View style={[styles.container, { paddingTop: topPadding, justifyContent: 'center', alignItems: 'center' }]}>
+        <Text style={{ color: 'red' }}>பிழை: தரவுகளைப் பெற முடியவில்லை.</Text>
+      </View>
+    );
+  }
 
   return (
     <View style={[styles.container, { paddingTop: topPadding }]}>

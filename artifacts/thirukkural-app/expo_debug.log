@@ -1,0 +1,61 @@
+  --non-interactive is not supported, use $CI=1 instead
+2026-04-08T14:58:53.308Z expo:telemetry Switching strategy from detached to instant
+2026-04-08T14:58:53.501Z expo:telemetry Recording 1 event(s)
+2026-04-08T14:58:53.527Z expo:env C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\thirukkural-app\.env does not exist, skipping this env file
+2026-04-08T14:58:53.527Z expo:env C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\thirukkural-app\.env.development does not exist, skipping this env file
+2026-04-08T14:58:53.528Z expo:env C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\thirukkural-app\.env.local does not exist, skipping this env file
+2026-04-08T14:58:53.528Z expo:env C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\thirukkural-app\.env.development.local does not exist, skipping this env file
+Starting project at C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\thirukkural-app
+2026-04-08T14:58:53.799Z expo:utils:fileNotifier Observing C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\thirukkural-app\babel.config.js
+2026-04-08T14:58:54.151Z expo:start:server:devServer Stopping dev server (bundler: metro)
+2026-04-08T14:58:54.151Z expo:start:server:devServer Stopped dev server (bundler: metro)
+2026-04-08T14:58:54.184Z expo:start:server:metro:router Using app as the root directory for Expo Router.
+2026-04-08T14:58:55.151Z expo:metro:config react-native-reanimated package.json: C:\Users\thush\Desktop\New folder\Thirukkural-Parser\node_modules\.pnpm\react-native-reanimated@4.1_515d6df303eb2cb6b0aef8cdac663c06\node_modules\react-native-reanimated\package.json
+2026-04-08T14:58:55.161Z expo:metro:config react-native-worklets package.json: C:\Users\thush\Desktop\New folder\Thirukkural-Parser\node_modules\.pnpm\react-native-worklets@0.5.1_e33ee53926cb739c160046f5657a922f\node_modules\react-native-worklets\package.json
+
+2026-04-08T14:58:55.213Z expo:metro:config react-native-reanimated package.json: C:\Users\thush\Desktop\New folder\Thirukkural-Parser\node_modules\.pnpm\react-native-reanimated@4.1_515d6df303eb2cb6b0aef8cdac663c06\node_modules\react-native-reanimated\package.json
+2026-04-08T14:58:55.217Z expo:metro:config react-native-worklets package.json: C:\Users\thush\Desktop\New folder\Thirukkural-Parser\node_modules\.pnpm\react-native-worklets@0.5.1_e33ee53926cb739c160046f5657a922f\node_modules\react-native-worklets\package.json
+Expo Metro config:
+- Version: 54.0.14
+- Extensions: ts, tsx, mjs, js, jsx, json, cjs, scss, sass, css
+- React Native: C:\Users\thush\Desktop\New folder\Thirukkural-Parser\node_modules\.pnpm\react-native@0.81.5_@babel+_5b5f786695eb3a8a4ec36c9b8d1b667a\node_modules\react-native
+- Watch Folders: C:\Users\thush\Desktop\New folder\Thirukkural-Parser\node_modules, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\thirukkural-app, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\mockup-sandbox, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\api-server, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\lib\db, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\lib\api-zod, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\lib\api-spec, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\lib\api-client-react, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\scripts
+- Node Module Paths: C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\thirukkural-app\node_modules, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\node_modules
+- Sass: null
+- Reanimated: 4.1.7
+- Worklets: 0.5.1
+- Babel Runtime: null
+
+
+Expo Metro config:
+- Version: 54.0.14
+- Extensions: ts, tsx, mjs, js, jsx, json, cjs, scss, sass, css
+- React Native: C:\Users\thush\Desktop\New folder\Thirukkural-Parser\node_modules\.pnpm\react-native@0.81.5_@babel+_5b5f786695eb3a8a4ec36c9b8d1b667a\node_modules\react-native
+- Watch Folders: C:\Users\thush\Desktop\New folder\Thirukkural-Parser\node_modules, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\thirukkural-app, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\mockup-sandbox, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\api-server, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\lib\db, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\lib\api-zod, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\lib\api-spec, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\lib\api-client-react, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\scripts
+- Node Module Paths: C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\thirukkural-app\node_modules, C:\Users\thush\Desktop\New folder\Thirukkural-Parser\node_modules
+- Sass: null
+- Reanimated: 4.1.7
+- Worklets: 0.5.1
+- Babel Runtime: null
+
+React Compiler enabled
+2026-04-08T14:58:55.657Z expo:metro:withMetroResolvers Appending 8 custom resolvers to Metro config. (has custom resolver: false)
+2026-04-08T14:58:55.716Z expo:start:server:urlCreator URL: http://127.0.0.1:19005
+Starting Metro Bundler
+2026-04-08T14:58:56.357Z expo:start:server:middleware:serveStatic Serving static files from: C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\thirukkural-app\public
+2026-04-08T14:58:56.358Z expo:start:server:devServer [tunnel] connect to port: 19005
+2026-04-08T14:58:56.595Z expo:start:platforms:android:adbReverse Failed to resolve the Android SDK path, skipping ADB: Failed to resolve the Android SDK path. Default install location not found: C:\Users\thush\AppData\Local\Android\Sdk. Use ANDROID_HOME to set the Android SDK location.
+2026-04-08T14:58:56.596Z expo:start:server:ngrok Stopping Tunnel
+2026-04-08T14:58:56.596Z expo:start:server:ngrok Global config path: C:\Users\thush\.expo\ngrok.yml
+2026-04-08T14:58:56.610Z expo:start:server:ngrok Hostname: 2qykuVI-anonymous-19005.exp.direct
+2026-04-08T14:58:58.292Z expo:start:server:ngrok Stopping Tunnel
+2026-04-08T14:58:58.292Z expo:start:server:ngrok Global config path: C:\Users\thush\.expo\ngrok.yml
+2026-04-08T14:59:00.177Z expo:start:server:ngrok Hostname: 2qykuVI-anonymous-19005.exp.direct
+2026-04-08T14:59:01.651Z expo:start:server:ngrok Stopping Tunnel
+2026-04-08T14:59:01.651Z expo:start:server:ngrok Global config path: C:\Users\thush\.expo\ngrok.yml
+2026-04-08T14:59:04.633Z expo:start:server:ngrok Hostname: 2qykuVI-anonymous-19005.exp.direct
+CommandError: ngrok tunnel took too long to connect.
+CommandError: ngrok tunnel took too long to connect.
+    at Timeout._onTimeout (C:\Users\thush\Desktop\New folder\Thirukkural-Parser\node_modules\.pnpm\@expo+cli@54.0.23_expo-rout_daef1aa59357a8cccc6b98050d411315\node_modules\@expo\cli\src\utils\delay.ts:52:14)
+    at listOnTimeout (node:internal/timers:605:17)
+    at processTimers (node:internal/timers:541:7)

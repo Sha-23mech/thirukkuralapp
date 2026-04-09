@@ -1,20 +1,34 @@
-// Export your models here. Add one export per file
-// export * from "./posts";
-//
-// Each model/table should ideally be split into different files.
-// Each model/table should define a Drizzle table, insert schema, and types:
-//
-//   import { pgTable, text, serial } from "drizzle-orm/pg-core";
-//   import { createInsertSchema } from "drizzle-zod";
-//   import { z } from "zod/v4";
-//
-//   export const postsTable = pgTable("posts", {
-//     id: serial("id").primaryKey(),
-//     title: text("title").notNull(),
-//   });
-//
-//   export const insertPostSchema = createInsertSchema(postsTable).omit({ id: true });
-//   export type InsertPost = z.infer<typeof insertPostSchema>;
-//   export type Post = typeof postsTable.$inferSelect;
+import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
-export {}
+export const pals = sqliteTable("pals", {
+  id: integer("id").primaryKey(),
+  name: text("name").notNull(),
+  nameTransliteration: text("name_transliteration").notNull(),
+  meaning: text("meaning").notNull(),
+});
+
+export const adhikarams = sqliteTable("adhikarams", {
+  id: integer("id").primaryKey(),
+  palId: integer("pal_id")
+    .notNull()
+    .references(() => pals.id),
+  name: text("name").notNull(),
+  nameTransliteration: text("name_transliteration").notNull(),
+  meaning: text("meaning").notNull(),
+  section: text("section"),
+  introduction: text("introduction"),
+});
+
+export const kurals = sqliteTable("kurals", {
+  number: integer("number").primaryKey(),
+  adhikaramId: integer("adhikaram_id")
+    .notNull()
+    .references(() => adhikarams.id),
+  tamil: text("tamil").notNull(),
+  transliteration: text("transliteration").notNull(),
+  commentary: text("commentary").notNull(),
+});
+
+export type Pal = typeof pals.$inferSelect;
+export type Adhikaram = typeof adhikarams.$inferSelect;
+export type Kural = typeof kurals.$inferSelect;

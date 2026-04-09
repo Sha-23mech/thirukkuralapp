@@ -24,6 +24,77 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /pals:
+    get:
+      operationId: getPals
+      tags: [kurals]
+      summary: Get all sections (Pals)
+      responses:
+        "200":
+          description: List of pals
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Pal"
+  /adhikarams:
+    get:
+      operationId: getAdhikarams
+      tags: [kurals]
+      summary: Get all chapters (Adhikarams)
+      parameters:
+        - name: palId
+          in: query
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: List of adhikarams
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Adhikaram"
+  /kurals:
+    get:
+      operationId: getKurals
+      tags: [kurals]
+      summary: Get kurals
+      parameters:
+        - name: adhikaramId
+          in: query
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: List of kurals
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Kural"
+  /kural/{number}:
+    get:
+      operationId: getKuralByNumber
+      tags: [kurals]
+      summary: Get a kural by number
+      parameters:
+        - name: number
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: A kural
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Kural"
+
 components:
   schemas:
     HealthStatus:
@@ -33,4 +104,32 @@ components:
           type: string
       required:
         - status
+    Pal:
+      type: object
+      properties:
+        id: { type: integer }
+        name: { type: string }
+        nameTransliteration: { type: string }
+        meaning: { type: string }
+      required: [id, name, nameTransliteration, meaning]
+    Adhikaram:
+      type: object
+      properties:
+        id: { type: integer }
+        palId: { type: integer }
+        name: { type: string }
+        nameTransliteration: { type: string }
+        meaning: { type: string }
+        section: { type: string }
+        introduction: { type: string }
+      required: [id, palId, name, nameTransliteration, meaning]
+    Kural:
+      type: object
+      properties:
+        number: { type: integer }
+        adhikaramId: { type: integer }
+        tamil: { type: string }
+        transliteration: { type: string }
+        commentary: { type: string }
+      required: [number, adhikaramId, tamil, transliteration, commentary]
 

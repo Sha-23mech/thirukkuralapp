@@ -1,16 +1,21 @@
-import { drizzle } from "drizzle-orm/node-postgres";
-import pg from "pg";
-import * as schema from "./schema";
+import { drizzle } from "drizzle-orm/libsql";
+import { createClient } from "@libsql/client";
+import * as schema from "./schema/index.js";
+import path from "path";
+import { fileURLToPath } from "url";
 
-const { Pool } = pg;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-if (!process.env.DATABASE_URL) {
-  throw new Error(
-    "DATABASE_URL must be set. Did you forget to provision a database?",
-  );
-}
+// Ensure the directory exists or just use a fixed path from root
+const workspaceRoot = path.resolve(__dirname, "../../..");
+const localDbPath = path.resolve(workspaceRoot, "lib/db/sqlite.db");
 
-export const pool = new Pool({ connectionString: process.env.DATABASE_URL });
-export const db = drizzle(pool, { schema });
+const client = createClient({
+  url: process.env["DATABASE_URL"] || `file:${localDbPath}`,
+  authToken: process.env["DATABASE_AUTH_TOKEN"],
+});
 
-export * from "./schema";
+export const db = drizzle(client, { schema });
+
+export * from "./schema/index.js";

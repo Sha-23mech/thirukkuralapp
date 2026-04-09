@@ -1,0 +1,6 @@
+
+> @workspace/api-server@0.0.0 start C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\api-server
+> node --enable-source-maps ./dist/index.mjs
+
+[21:26:35.279] [32mINFO[39m (40436): [36mServer listening[39m
+    [35mport[39m: 3000

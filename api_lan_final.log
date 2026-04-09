@@ -1,0 +1,25 @@
+
+> @workspace/api-server@0.0.0 dev C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\api-server
+> set NODE_ENV=development && pnpm run build && pnpm run start
+
+
+> @workspace/api-server@0.0.0 build C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\api-server
+> node ./build.mjs
+
+
+  dist\index.mjs                   1.4mb
+  dist\pino-worker.mjs           153.5kb
+  dist\pino-file.mjs             142.1kb
+  dist\pino-pretty.mjs           114.6kb
+  dist\thread-stream-worker.mjs    7.3kb
+  ...and 5 more output files...
+
+Done in 731ms
+
+> @workspace/api-server@0.0.0 start C:\Users\thush\Desktop\New folder\Thirukkural-Parser\artifacts\api-server
+> node --enable-source-maps ./dist/index.mjs
+
+[20:51:47.068] [32mINFO[39m (40224): [36mServer listening[39m
+    [35mport[39m: 3000
+
+C:\Users\thush\Desktop\New folder\Thirukkural-Parser>
