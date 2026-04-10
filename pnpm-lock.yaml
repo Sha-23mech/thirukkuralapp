@@ -40,7 +40,7 @@ catalogs:
       specifier: ^2.1.1
       version: 2.1.1
     drizzle-orm:
-      specifier: ^0.45.1
+      specifier: ^0.45.2
       version: 0.45.2
     framer-motion:
       specifier: ^12.23.24
@@ -502,6 +502,13 @@ importers:
         version: 0.31.10
 
   scripts:
+    dependencies:
+      '@libsql/client':
+        specifier: 'catalog:'
+        version: 0.14.0
+      drizzle-orm:
+        specifier: 'catalog:'
+        version: 0.45.2(@libsql/client@0.14.0)
     devDependencies:
       '@types/node':
         specifier: 'catalog:'

@@ -1,0 +1,25 @@
+
+> @workspace/scripts@0.0.0 migrate C:\Users\thush\Desktop\New folder\Thirukkural-Parser\scripts
+> tsx ./src/migrate.ts
+
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+Error [TransformError]: Transform failed with 1 error:
+C:\Users\thush\Desktop\New folder\Thirukkural-Parser\scripts\src\migrate.ts:101:0: ERROR: Expected "finally" but found "migrate"
+    at failureErrorWithLog (C:\Users\thush\Desktop\New folder\Thirukkural-Parser\node_modules\.pnpm\esbuild@0.27.3\node_modules\esbuild\lib\main.js:1467:15)
+    at C:\Users\thush\Desktop\New folder\Thirukkural-Parser\node_modules\.pnpm\esbuild@0.27.3\node_modules\esbuild\lib\main.js:736:50
+    at responseCallbacks.<computed> (C:\Users\thush\Desktop\New folder\Thirukkural-Parser\node_modules\.pnpm\esbuild@0.27.3\node_modules\esbuild\lib\main.js:603:9)
+    at handleIncomingPacket (C:\Users\thush\Desktop\New folder\Thirukkural-Parser\node_modules\.pnpm\esbuild@0.27.3\node_modules\esbuild\lib\main.js:658:12)
+    at Socket.readFromStdout (C:\Users\thush\Desktop\New folder\Thirukkural-Parser\node_modules\.pnpm\esbuild@0.27.3\node_modules\esbuild\lib\main.js:581:7)
+    at Socket.emit (node:events:508:28)
+    at addChunk (node:internal/streams/readable:563:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+    at Readable.push (node:internal/streams/readable:394:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+
+Node.js v24.14.0
+C:\Users\thush\Desktop\New folder\Thirukkural-Parser\scripts:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @workspace/scripts@0.0.0 migrate: `tsx ./src/migrate.ts`
+Exit status 1

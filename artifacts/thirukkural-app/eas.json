@@ -1,11 +1,6 @@
 {
   "cli": {
-    "version": ">= 14.4.2",
-    "appExtensions": {
-      "thirukkural-app": {
-        "appleTeamId": "YOUR_APPLE_TEAM_ID"
-      }
-    }
+    "version": ">= 14.4.2"
   },
   "build": {
     "development": {

@@ -17,7 +17,7 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import Colors from "@/constants/colors";
 import { setBaseUrl } from "@workspace/api-client-react";
 
-setBaseUrl("https://pete-breed-group-impose.trycloudflare.com");
+setBaseUrl("https://thirukkuralapp.onrender.com");
 
 SplashScreen.preventAutoHideAsync();
 

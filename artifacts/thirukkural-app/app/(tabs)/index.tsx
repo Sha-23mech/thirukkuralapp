@@ -14,7 +14,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 import * as Haptics from "expo-haptics";
 
-import { useGetKurals } from "@workspace/api-client-react";
+import { useGetKurals, useGetAdhikarams } from "@workspace/api-client-react";
 import type { Kural } from "@workspace/api-client-react";
 import Colors from "@/constants/colors";
 
@@ -97,7 +97,11 @@ export default function HomeScreen() {
   const bottomPadding = Platform.OS === "web" ? 34 : tabBarHeight;
 
   // For the initial version, we fetch kurals for the first adhikaram (id: 1)
-  const { data: kurals, isLoading, error } = useGetKurals({ adhikaramId: 1 });
+  const { data: kurals, isLoading: isKuralsLoading, error: kuralsError } = useGetKurals({ adhikaramId: 1 });
+  const { data: adhikarams, isLoading: isAdhikaramsLoading } = useGetAdhikarams({ palId: 1 });
+
+  const isLoading = isKuralsLoading || isAdhikaramsLoading;
+  const error = kuralsError;
 
   if (isLoading) {
     return (
@@ -107,7 +111,9 @@ export default function HomeScreen() {
     );
   }
 
-  if (error) {
+  const currentAdhikaram = adhikarams?.find(a => a.id === 1);
+
+  if (error || !currentAdhikaram) {
     return (
       <View style={[styles.container, { paddingTop: topPadding, justifyContent: 'center', alignItems: 'center' }]}>
         <Text style={{ color: 'red' }}>பிழை: தரவுகளைப் பெற முடியவில்லை.</Text>
@@ -120,7 +126,7 @@ export default function HomeScreen() {
       <View style={styles.header}>
         <View>
           <Text style={styles.headerTitle}>திருக்குறள்</Text>
-          <Text style={styles.headerSubtitle}>Thirukkural • கடவுள் வாழ்த்து</Text>
+          <Text style={styles.headerSubtitle}>Thirukkural • {currentAdhikaram.name}</Text>
         </View>
         <View style={styles.headerBadge}>
           <MaterialCommunityIcons name="book-open-variant" size={20} color={Colors.light.gold} />
@@ -129,8 +135,8 @@ export default function HomeScreen() {
 
       <View style={styles.adhikaramBanner}>
         <Text style={styles.adhikaramLabel}>அதிகாரம் 1</Text>
-        <Text style={styles.adhikaramName}>{data.pals[0].adhikarams[0].name}</Text>
-        <Text style={styles.adhikaramMeaning}>{data.pals[0].adhikarams[0].meaning}</Text>
+        <Text style={styles.adhikaramName}>{currentAdhikaram.name}</Text>
+        <Text style={styles.adhikaramMeaning}>{currentAdhikaram.meaning}</Text>
       </View>
 
       <FlatList

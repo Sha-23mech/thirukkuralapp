@@ -9,6 +9,7 @@ export default defineConfig({
   schema: "./src/schema/index.ts",
   dialect: "sqlite",
   dbCredentials: {
-    url: "sqlite.db",
+    url: process.env["DATABASE_URL"] || "sqlite.db",
+    authToken: process.env["DATABASE_AUTH_TOKEN"],
   },
 });
