@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "066cf01d-b487-484b-97dd-febd5348cb9d"
+      }
+    },
+    "android": {
+      "package": "com.thirukkural.parser"
+    }
+  }
+}
