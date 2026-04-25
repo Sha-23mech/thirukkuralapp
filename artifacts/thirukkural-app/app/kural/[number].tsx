@@ -129,9 +129,7 @@ export default function KuralDetailScreen() {
           <View style={styles.verseCard}>
             <View style={styles.verseCardHeader}>
               <MaterialCommunityIcons name="format-quote-open" size={32} color={Colors.light.gold} />
-              <View style={styles.palBadge}>
-                <Text style={styles.palBadgeText}>திருக்கோவையார்</Text>
-              </View>
+
             </View>
 
             <View style={styles.verseLines}>
@@ -208,7 +206,7 @@ export default function KuralDetailScreen() {
         </Pressable>
 
         <View style={styles.navDots}>
-           <View style={[styles.navDot, styles.navDotActive]} />
+          <View style={[styles.navDot, styles.navDotActive]} />
         </View>
 
         <Pressable

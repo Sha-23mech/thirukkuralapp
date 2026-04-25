@@ -1,6 +1,9 @@
 import { MaterialCommunityIcons, Ionicons } from "@expo/vector-icons";
+import { router } from "expo-router";
+import * as Haptics from "expo-haptics";
 import React from "react";
 import {
+  Pressable,
   ScrollView,
   StyleSheet,
   Text,
@@ -98,14 +101,25 @@ export default function AboutScreen() {
           <Text style={styles.sectionTitle}>பொருளடக்கம்</Text>
           <Text style={styles.sectionTitleEn}>Contents</Text>
           {data.pals[0].adhikarams[0].kurals.map((kural) => (
-            <View key={kural.number} style={styles.tocItem}>
+            <Pressable
+              key={kural.number}
+              onPress={() => {
+                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                router.push({ pathname: "/kural/[number]", params: { number: kural.number } });
+              }}
+              style={({ pressed }) => [
+                styles.tocItem,
+                { opacity: pressed ? 0.7 : 1 }
+              ]}
+            >
               <View style={styles.tocNumber}>
                 <Text style={styles.tocNumberText}>{kural.number}</Text>
               </View>
               <Text style={styles.tocKural} numberOfLines={1}>
                 {kural.tamil.split("\n")[0]}
               </Text>
-            </View>
+              <Ionicons name="chevron-forward" size={14} color={Colors.light.textMuted} />
+            </Pressable>
           ))}
         </View>
       </ScrollView>
